@@ -31,14 +31,6 @@ public class PnlTextEditor extends javax.swing.JPanel {
         this.PanelTextEditor = PanelTextEditor;
     }
 
-    public JPanel getjPanel1() {
-        return jPanel1;
-    }
-
-    public void setjPanel1(JPanel jPanel1) {
-        this.jPanel1 = jPanel1;
-    }
-
     public JPanel getjPanel2() {
         return jPanel2;
     }
@@ -71,6 +63,14 @@ public class PnlTextEditor extends javax.swing.JPanel {
         this.lblWords = lblWords;
     }
 
+    public JPanel getPnlDown() {
+        return pnlDown;
+    }
+
+    public void setPnlDown(JPanel pnlDown) {
+        this.pnlDown = pnlDown;
+    }
+
     public JTextPane getTextPanel() {
         return textPanel;
     }
@@ -78,8 +78,6 @@ public class PnlTextEditor extends javax.swing.JPanel {
     public void setTextPanel(JTextPane textPanel) {
         this.textPanel = textPanel;
     }
-
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -90,7 +88,7 @@ public class PnlTextEditor extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        pnlDown = new javax.swing.JPanel();
         lblLines = new javax.swing.JLabel();
         lblLetters = new javax.swing.JLabel();
         lblWords = new javax.swing.JLabel();
@@ -100,18 +98,18 @@ public class PnlTextEditor extends javax.swing.JPanel {
 
         setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        pnlDown.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         lblLines.setText("Lines:");
-        jPanel1.add(lblLines);
+        pnlDown.add(lblLines);
 
         lblLetters.setText("Letters:");
-        jPanel1.add(lblLetters);
+        pnlDown.add(lblLetters);
 
         lblWords.setText("Words:");
-        jPanel1.add(lblWords);
+        pnlDown.add(lblWords);
 
-        add(jPanel1, java.awt.BorderLayout.PAGE_END);
+        add(pnlDown, java.awt.BorderLayout.PAGE_END);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.BorderLayout());
@@ -126,11 +124,11 @@ public class PnlTextEditor extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane PanelTextEditor;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblLetters;
     private javax.swing.JLabel lblLines;
     private javax.swing.JLabel lblWords;
+    private javax.swing.JPanel pnlDown;
     private javax.swing.JTextPane textPanel;
     // End of variables declaration//GEN-END:variables
 }

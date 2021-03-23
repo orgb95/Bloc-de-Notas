@@ -133,7 +133,7 @@ public class FrmApp extends javax.swing.JFrame {
 
     private void mniNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniNewActionPerformed
         PnlTextEditor pnlTextEditor = new PnlTextEditor();
-	String Name = JOptionPane.showInputDialog("Ingrese el nombre: ");;
+	String Name = JOptionPane.showInputDialog("Ingrese el nombre: ");
         tbpContent.addTab(Name, pnlTextEditor);
     }//GEN-LAST:event_mniNewActionPerformed
 
@@ -174,7 +174,7 @@ public class FrmApp extends javax.swing.JFrame {
 			}
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "Archivo no compatible");
+			JOptionPane.showMessageDialog(null, "El archivo no es compatible");
 		}
     }//GEN-LAST:event_mniOpenActionPerformed
 
