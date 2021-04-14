@@ -12,6 +12,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.MutableTreeNode;
 import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 import ni.uni.edu.programacion.views.FrmTreeDemo;
@@ -44,6 +45,10 @@ public class FrmTreeController {
             btnRemoveActionListener(e);
         });
         
+        frmTreeDemo.getBtnRemoveAll().addActionListener((e)->{
+            btnRemoveAllActionListener(e);
+        });
+        
         frmTreeDemo.getTreeAccount().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e){
@@ -57,6 +62,10 @@ public class FrmTreeController {
         
         frmTreeDemo.getMniRemove().addActionListener((e) -> {
             btnRemoveActionListener(e);
+        });
+        
+        frmTreeDemo.getMniRemoveAll().addActionListener((e)->{
+            btnRemoveAllActionListener(e);
         });
 
     }
@@ -82,6 +91,11 @@ public class FrmTreeController {
         treeModel.removeNodeFromParent(node);
     }
     
+    private void btnRemoveAllActionListener(ActionEvent e) {
+        root.removeAllChildren();
+        treeModel.reload();
+    }
+    
     public void treeAccountMouseListener(MouseEvent e){
         if(e.getButton() == MouseEvent.BUTTON3 ){
              
@@ -89,6 +103,7 @@ public class FrmTreeController {
             if(c == null){
                 return;
             }
+            frmTreeDemo.getTreeAccount().setSelectionPath(c);
             
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) c.getLastPathComponent();         
             frmTreeDemo.getPmnTree().show(frmTreeDemo.getTreeAccount(), e.getX(), e.getY());
