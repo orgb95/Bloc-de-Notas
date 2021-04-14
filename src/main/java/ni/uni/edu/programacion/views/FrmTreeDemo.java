@@ -34,6 +34,10 @@ public class FrmTreeDemo extends javax.swing.JFrame {
         return btnRemove;
     }
 
+    public JButton getBtnRemoveAll() {
+        return btnRemoveAll;
+    }
+    
     public JTree getTreeAccount() {
         return treeAccount;
     }
@@ -50,7 +54,10 @@ public class FrmTreeDemo extends javax.swing.JFrame {
         return mniRemove;
     }
 
-    
+    public JMenuItem getMniRemoveAll() {
+        return mniRemoveAll;
+    }
+
     
     
     /**
@@ -65,9 +72,11 @@ public class FrmTreeDemo extends javax.swing.JFrame {
         pmnTree = new javax.swing.JPopupMenu();
         mniAdd = new javax.swing.JMenuItem();
         mniRemove = new javax.swing.JMenuItem();
+        mniRemoveAll = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnRemove = new javax.swing.JButton();
+        btnRemoveAll = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         treeAccount = new javax.swing.JTree();
@@ -77,6 +86,14 @@ public class FrmTreeDemo extends javax.swing.JFrame {
 
         mniRemove.setText("Remove");
         pmnTree.add(mniRemove);
+
+        mniRemoveAll.setText("Remove All");
+        mniRemoveAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniRemoveAllActionPerformed(evt);
+            }
+        });
+        pmnTree.add(mniRemoveAll);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tree Demo");
@@ -88,6 +105,15 @@ public class FrmTreeDemo extends javax.swing.JFrame {
 
         btnRemove.setText("Remove");
         jPanel1.add(btnRemove);
+
+        btnRemoveAll.setText("Remove All");
+        btnRemoveAll.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnRemoveAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveAllActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnRemoveAll);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_END);
 
@@ -101,9 +127,17 @@ public class FrmTreeDemo extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(232, 284));
+        setSize(new java.awt.Dimension(371, 362));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRemoveAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveAllActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRemoveAllActionPerformed
+
+    private void mniRemoveAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniRemoveAllActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mniRemoveAllActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,11 +177,13 @@ public class FrmTreeDemo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnRemove;
+    private javax.swing.JButton btnRemoveAll;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuItem mniAdd;
     private javax.swing.JMenuItem mniRemove;
+    private javax.swing.JMenuItem mniRemoveAll;
     private javax.swing.JPopupMenu pmnTree;
     private javax.swing.JTree treeAccount;
     // End of variables declaration//GEN-END:variables
